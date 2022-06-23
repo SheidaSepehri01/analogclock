@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+.box {
+    min-height: 100vh;
+    background: #d8dbd2;
+    margin: 0;
+    color: #d8dbd2;
+    box-shadow: 0px 0px 4px 4px #cfd1c9;
+}
+
+.box h1,
+.digital-clock {
+    text-shadow: 3PX 1PX 5px #adafa9;
+    font-size: calc(4em + 1vw);
+}
+
+.clock {
+    border-radius: 50%;
+    width: 23em;
+    height: 23em;
+    box-shadow: inset 0px 0px 0px 9px #d8dbd2, 3px 2px 4px 0px #c1c3bc, inset -2px -2px 5px 7px #ebece8, -3px -2px 7px 0px #ebece8, inset 2px 2px 8px 7px #c1c3bc;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.inner-box {
+    box-shadow: 0px 0px 9px 0px #f0f1ed, inset -2px -2px 3px 0px #d8dbd2, inset 1px 1px 3px 1px #bcbeb7;
+    border-radius: 50%;
+    height: 9em;
+    width: 9em;
+    position: absolute;
+    overflow: visible;
+}
+.hour-hand,
+.min-hand,
+.sec-hand{
+    position: absolute;
+    width: 1em;
+    display: flex;
+    justify-content: center;
+}
+.sec-hand{
+    height: 15em;
+}
+.min-hand{
+    height: 12em;
+}
+.hour-hand{
+    height: 8em;
+}
+
+.center,
+.hour-hand::before,
+.min-hand::before,
+.sec-hand::before {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(51, 11, 81, 0.726);
+    position: absolute;
+
+}
+
+.inner-box .center {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    background: #ff5722;
+}
+
+.inner-box .hour-hand::before {
+    content: '';
+    border-radius: 1em;
+    width: .7em;
+    height: 4em;
+}
+
+.inner-box .min-hand::before {
+    content: '';
+    width: .5em;
+    height: 6em;
+    border-radius: 1em;
+
+}
+
+.inner-box .sec-hand::before {
+    content: '';
+    border-radius: 1em;
+    width: .2em;
+    height:6em;
+    background: #ff5722;
+}
+
+.digital-clock {
+    border-radius: .3em;
+    box-shadow: 3px 2px 4px 0px #c1c3bc, -3px -2px 7px 0px #ebece8;
+    height: 20%;
+    min-width: 64%;
+    text-align: center;
+}
